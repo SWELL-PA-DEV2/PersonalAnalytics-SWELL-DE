@@ -3,8 +3,8 @@ import { StudyConfiguration } from './StudyConfiguration';
 const studyConfig: StudyConfiguration = {
   name: 'SWELL - Student Wellbeing and Learning on Laptops',
   shortDescription: 'tbd',
-  infoUrl: 'https://mydata-lab.uzh.ch/de/studien/SWELL.html',
-  privacyPolicyUrl: 'https://mydata-lab.uzh.ch/de/studien/SWELL.html',
+  infoUrl: 'https://mydata-lab.uzh.ch/de/studien/swell.html',
+  privacyPolicyUrl: 'https://mydata-lab.uzh.ch/de/studien/swell.html',
   uploadUrl: 'https://hasel.dev/swell-upload',
   contactName: 'Dr. Malte Doehne, Andreas Baumer, Dr. Andre Meyer',
   contactEmail: 'swell@d2usp.ch',
