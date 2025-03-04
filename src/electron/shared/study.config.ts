@@ -1,8 +1,8 @@
 import { StudyConfiguration } from './StudyConfiguration';
 
 const studyConfig: StudyConfiguration = {
-  name: 'SWELL - Student Wellbeing and Learning on Laptops',
-  shortDescription: 'tbd',
+  name: 'SWeLL - Student Wellbeing and Learning on Laptops',
+  shortDescription: 'The aim of the study is to understand how students from different fields of study use laptops and tablets for their studies, what impact this has on their well-being, and how digital learning processes can be optimized. A detailed description of the study can be found <a href="https://mydata-lab.uzh.ch/de/studien/swell.html" target=_blank">here</a>.',
   infoUrl: 'https://mydata-lab.uzh.ch/de/studien/swell.html',
   privacyPolicyUrl: 'https://mydata-lab.uzh.ch/de/studien/swell.html',
   uploadUrl: 'https://hasel.dev/swell-upload',
@@ -26,14 +26,28 @@ const studyConfig: StudyConfiguration = {
     experienceSamplingTracker: {
       enabled: true,
       enabledWorkHours: false,
-      scale: 7,
+      scale: 5,
       questions: [
-        'Compared to your normal level of productivity, how productive do you consider the previous session?',
-        'How well did you spend your time in the previous session?'
+        'How productive are you right now compared to usual?',
+        'How well are you currently spending your time?',
+        'I\'m feeling optimistic about the future', 
+        'I\'m feeling useful', 
+        'I\'m feeling relaxed', 
+        'I\'m dealing with problems well', 
+        'I\'m thinking clearly', 
+        'I\'m feeling close to other people', 
+        'I\'m able to make up my own mind about things'
       ],
       responseOptions: [
-        ['not at all productive', 'moderately productive', 'very productive'],
-        ['not well', 'moderately well', 'very well']
+        ['not at all', 'somewhat', 'very'],
+        ['not at all', 'somewhat', 'very'],
+        ['not at all', 'somewhat', 'very'],
+        ['not at all', 'somewhat', 'very'],
+        ['not at all', 'somewhat', 'very'],
+        ['not at all', 'somewhat', 'very'],
+        ['not at all', 'somewhat', 'very'],
+        ['not at all', 'somewhat', 'very'],
+        ['not at all', 'somewhat', 'very']
       ],
       intervalInMs: 1000 * 60 * 60 * 3, // 3 hours
       samplingRandomization: 0.1 // 10% randomization, so the interval will be between 2.7 and 3.3 hours
