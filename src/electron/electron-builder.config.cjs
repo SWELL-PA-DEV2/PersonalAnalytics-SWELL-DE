@@ -10,7 +10,7 @@ module.exports = {
   publish: {
     provider: 'github',
     owner: 'SWELL-PA-DEV',
-    repo: 'PersonalAnalytics-SWELL'
+    repo: 'PersonalAnalytics-SWELL-EN'
   },
   afterSign: "scripts/notarize.cjs",
   mac: {
