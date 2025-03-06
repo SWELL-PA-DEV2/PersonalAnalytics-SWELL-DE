@@ -96,7 +96,7 @@ async function skipExperienceSample() {
           class="flex w-full items-center justify-center rounded-none border border-transparent px-4 text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:outline-none"
           @click="skipExperienceSample()"
         >
-          <span v-if="sampleLoadingValue !== null" class="w-6"> Skip </span>
+          <span v-if="sampleLoadingValue !== null" class="w-6"> Weiter </span>
           <span v-else class="w-6 font-medium">
             <span class="loading loading-spinner loading-xs" />
           </span>
