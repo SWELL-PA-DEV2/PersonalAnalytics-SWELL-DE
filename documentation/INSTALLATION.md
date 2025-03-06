@@ -2,7 +2,7 @@
 Anyone may install PersonalAnalytics on their Windows or macOS device to non-intrusively collect computer interaction data, and analyze their activity, time spent and work habits for themselves. In the future, once we'll re-introduce the Retrospection (i.e. visualizations of the collected and self-reported data), it will be much easier to gain insights again.
 
 ## How to install PersonalAnalytics on Windows
-1. Visit [https://hasel.dev/swell-windows](https://hasel.dev/swell-windows) to download the installation-file (exe)
+1. Visit [https://hasel.dev/swell-windows-de](https://hasel.dev/swell-windows-de) to download the installation-file (exe)
 2. Wait for the download to complete
 3. Double click the downloaded file and follow the installer
 4. Select "Run PersonalAnalytics" before closing the installer
@@ -15,8 +15,8 @@ The following video shows the steps in action:
 
 
 ## How to install PersonalAnalytics on macOS
-1. If you own a newer Mac with an M1/M2/M3/M4 processor, visit [https://hasel.dev/swell-macos-arm](https://hasel.dev/swell-macos-arm) to download the instal file (dng)
-2. If you own a Mac with an intel-based processor, visit [https://hasel.dev/swell-macos-intel](https://hasel.dev/swell-macos-intel) to download the instal file (dng)
+1. If you own a newer Mac with an M1/M2/M3/M4 processor, visit [https://hasel.dev/swell-macos-arm-de](https://hasel.dev/swell-macos-arm-de) to download the instal file (dng)
+2. If you own a Mac with an intel-based processor, visit [https://hasel.dev/swell-macos-intel-de](https://hasel.dev/swell-macos-intel-de) to download the instal file (dng)
 3. Wait for the download to complete
 4. Open the downloaded instller and drag the PersonalAnalytics-app to your Applications folder
 5. (optional) Click "Open" in case a warning is shown that the app was downloaded from the internet

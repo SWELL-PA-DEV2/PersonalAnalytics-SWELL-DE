@@ -1,8 +1,8 @@
 import { StudyConfiguration } from './StudyConfiguration';
 
 const studyConfig: StudyConfiguration = {
-  name: 'SWeLL - Student Wellbeing and Learning on Laptops',
-  shortDescription: 'The aim of the study is to understand how students from different fields of study use laptops and tablets for their studies, what impact this has on their well-being, and how digital learning processes can be optimized. A detailed description of the study can be found <a href="https://mydata-lab.uzh.ch/de/studien/swell.html" target=_blank">here</a>.',
+  name: 'SWeLL - Studenteenwohlbefinden und -Lernen auf Laptops',
+  shortDescription: 'Das Ziel der Studie ist es, zu verstehen, wie Studierende aus verschiedenen Fachrichtungen Laptops und Tablets für ihr Studium nutzen, welchen Einfluss dies auf ihr Wohlbefinden hat und wie digitale Lernprozesse optimiert werden können. Eine detaillierte Beschreibung der Studie finden Sie<a href="https://mydata-lab.uzh.ch/de/studien/swell.html" target=_blank">hier</a>.',
   infoUrl: 'https://mydata-lab.uzh.ch/de/studien/swell.html',
   privacyPolicyUrl: 'https://mydata-lab.uzh.ch/de/studien/swell.html',
   uploadUrl: 'https://hasel.dev/swell-upload',
@@ -28,26 +28,26 @@ const studyConfig: StudyConfiguration = {
       enabledWorkHours: false,
       scale: 5,
       questions: [
-        'How productive are you right now compared to usual?',
-        'How well are you currently spending your time?',
-        'I\'m feeling optimistic about the future', 
-        'I\'m feeling useful', 
-        'I\'m feeling relaxed', 
-        'I\'m dealing with problems well', 
-        'I\'m thinking clearly', 
-        'I\'m feeling close to other people', 
-        'I\'m able to make up my own mind about things'
+        'Wie produktiv sind Sie gerade im Vergleich zu sonst?',
+        'Wie gut nutzen Sie gerade Ihre Zeit?',
+        'Ich fühle mich in Bezug auf die Zukunft gerade optimistisch.', 
+        'Ich fühle mich gerade nützlich.', 
+        'Ich fühle mich gerade entspannt.', 
+        'Ich gehe mit Problemen gerade gut um.', 
+        'Ich kann gerade klar denken.', 
+        'Ich fühle mich anderen Menschen gerade nahe.', 
+        'Ich bin gerade in der Lage, Entscheidungen zu treffen.'
       ],
       responseOptions: [
-        ['not at all', 'somewhat', 'very'],
-        ['not at all', 'somewhat', 'very'],
-        ['not at all', 'somewhat', 'very'],
-        ['not at all', 'somewhat', 'very'],
-        ['not at all', 'somewhat', 'very'],
-        ['not at all', 'somewhat', 'very'],
-        ['not at all', 'somewhat', 'very'],
-        ['not at all', 'somewhat', 'very'],
-        ['not at all', 'somewhat', 'very']
+        ['gar nicht', 'etwas', 'sehr'],
+        ['gar nicht', 'etwas', 'sehr'],
+        ['gar nicht', 'etwas', 'sehr'],
+        ['gar nicht', 'etwas', 'sehr'],
+        ['gar nicht', 'etwas', 'sehr'],
+        ['gar nicht', 'etwas', 'sehr'],
+        ['gar nicht', 'etwas', 'sehr'],
+        ['gar nicht', 'etwas', 'sehr'],
+        ['gar nicht', 'etwas', 'sehr']
       ],
       intervalInMs: 1000 * 60 * 60 * 3, // 3 hours
       samplingRandomization: 0.1 // 10% randomization, so the interval will be between 2.7 and 3.3 hours
