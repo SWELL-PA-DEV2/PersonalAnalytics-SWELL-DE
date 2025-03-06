@@ -145,7 +145,7 @@ function startAllTrackers() {
               id="title"
               class="ml-5 self-center text-3xl font-medium text-neutral-800 dark:text-neutral-300"
             >
-              Welcome to {{ studyInfo.studyName }}
+              Willkommen zu {{ studyInfo.studyName }}
             </h1>
           </div>
           <StudyInfo :study-info="studyInfo" />
@@ -156,24 +156,22 @@ function startAllTrackers() {
           </h1>
           <div class="text-md">
             <p>
-              This study uses PersonalAnalytics to store computer interaction data, including app
-              names, window titles, user input from mouse and keyboard. The data is
-              <span class="font-bold dark:text-slate-200">only stored locally</span> and will
-              <span class="font-bold dark:text-slate-200"
-                ><span class="italic">not</span> be shared
-              </span>
-              with the researchers without your explicit permission.
+              Diese Studie verwendet PersonalAnalytics, um Daten zur Computerinteraktion zu speichern,
+              einschliesslich App-Namen, Fenstertitel sowie Benutzereingaben von Maus und Tastatur.
+              Die Daten werden <span class="font-bold dark:text-slate-200">ausschliesslich lokal gespeichert</span> und
+              <span class="font-bold dark:text-slate-200"><span class="italic">nicht</span> ohne Ihre ausdrückliche Erlaubnis</span>
+              mit den Forschenden geteilt.
             </p>
             <div class="flex flex-col">
               <div v-if="requiresAccessibilityPermission" class="my-5 flex flex-col">
                 <p>
-                  To allow PersonalAnalytics to log computer interaction data on macOS, you need to
-                  grant permissions to do so.
+                  Um PersonalAnalytics zu ermöglichen, Computerinteraktionsdaten auf macOS zu sammeln,
+                müssen Sie die entsprechenden Berechtigungen erteilen.
                 </p>
                 <p>
-                  To allow PersonalAnalytics to access to user input data, please open the
-                  accessibility settings and grant permissions by toggling the entry for
-                  PersonalAnalytics
+                  Um PersonalAnalytics den Zugriff auf Benutzereingabedaten zu ermöglichen,
+                  öffnen Sie bitte die Bedienungshilfen-Einstellungen(auf macOS) und erteilen Sie die Berechtigung,
+                  indem Sie den Eintrag für PersonalAnalytics aktivieren.
                 </p>
                 <div class="flex items-center justify-center pt-8">
                   <button
@@ -184,7 +182,7 @@ function startAllTrackers() {
                     <span v-if="isAccessibilityPermissionLoading">
                       <span class="loading loading-spinner loading-xs" />
                     </span>
-                    <span v-else>Grant Accessibility Access</span>
+                    <span v-else>Zugriff auf Bedienungshilfe erlauben</span>
                   </button>
                   <div v-else class="flex flex-row">
                     <svg
@@ -203,19 +201,19 @@ function startAllTrackers() {
                       <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" />
                     </svg>
 
-                    <span class="ml-2 text-green-500">Accessibility permission granted</span>
+                    <span class="ml-2 text-green-500">Zugriff auf Bedienungshilfe erlaubt</span>
                   </div>
                 </div>
               </div>
               <div v-if="requiresScreenRecordingPermission" class="my-5 flex flex-col">
                 <p>
-                  To allow PersonalAnalytics to access app window titles, please open the screen
-                  recording settings and grant permissions by toggling the entry for
-                  PersonalAnalytics.
+                  Um PersonalAnalytics den Zugriff auf Fenstertitel von Apps zu ermöglichen,
+                  öffnen Sie bitte die Einstellungen für Bildschirmaufnahmen (auf macOS) und erteilen Sie die Berechtigung,
+                  indem Sie den Eintrag für PersonalAnalytics aktivieren.
                 </p>
                 <p>
-                  Note that for your keyboard usage, only the number of keystrokes and not the exact
-                  keys are stored. Your screen or audio is not recorded.
+                  Bitte beachten Sie, dass für Ihre Tastatureingaben nur die Anzahl der Anschläge,
+                  nicht aber die genauen Tasten gespeichert werden. Ihr Bildschirm oder Audio wird nicht aufgezeichnet.
                 </p>
                 <div class="flex items-center justify-center pt-8">
                   <button
@@ -227,7 +225,7 @@ function startAllTrackers() {
                     <span v-if="isScreenRecordingPermissionLoading">
                       <span class="loading loading-spinner loading-xs" />
                     </span>
-                    <span v-else>Grant Screen Access</span>
+                    <span v-else>Zugriff auf Bildschirmaufnahme erlauben</span>
                   </button>
                   <div v-else class="flex flex-row">
                     <svg
@@ -246,42 +244,41 @@ function startAllTrackers() {
                       <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" />
                     </svg>
 
-                    <span class="ml-2 text-green-500">Screen Recording permission granted</span>
+                    <span class="ml-2 text-green-500">Zugriff auf BIldschirmaufnahme erlaubt</span>
                   </div>
                 </div>
               </div>
             </div>
             <p v-if="requiresScreenRecordingPermission" class="mt-6">
-              After giving permissions, you will be asked to close and restart PersonalAnalytics.
-              Please restart the app manually if it doesn't do so automatically.
+              Nachdem Sie die Berechtigungen erteilt haben, werden Sie aufgefordert, PersonalAnalytics zu schliessen und neu zu starten.
+              Bitte starten Sie die App manuell neu, falls dies nicht automatisch geschieht.
             </p>
           </div>
         </div>
         <div v-else-if="currentNamedStep === 'study-trackers-started'" key="2" class="absolute">
           <h1 class="mb-8 text-3xl font-medium text-neutral-800 dark:text-neutral-300">
-            PersonalAnalytics is running
+            PersonalAnalytics läuft
           </h1>
           <article class="prose prose-lg max-w-none">
             <p v-if="requiresAnyPermission">
-              Thank you for setting up PersonalAnalytics and participating in
-              {{ studyInfo.studyName }}. The app is now running in the background and you can access
-              it anytime through the menubar, where you have options to receive support and access
-              the collected data.
+              Vielen Dank, dass Sie PersonalAnalytics eingerichtet und an der {{ studyInfo.studyName }} Studie teilnehmen.
+              Die App läuft nun im Hintergrund, und Sie können jederzeit über die Menüleiste darauf zugreifen.
+              Dort haben Sie die Möglichkeit, Support zu erhalten und auf die gesammelten Daten zuzugreifen.
             </p>
             <p v-else>
-              Thank you for setting up PersonalAnalytics and participating in
-              {{ studyInfo.studyName }}. The app is now running in the background and you can access
-              it anytime through the taskbar, where you have options to receive support and access
-              the collected data. Note that the icon might actually be hidden in the taskbar
+              Vielen Dank, dass Sie PersonalAnalytics eingerichtet und an der {{ studyInfo.studyName }} Studie teilnehmen.
+              Die App läuft nun im Hintergrund, und Sie können jederzeit über die Taskleiste darauf zugreifen.
+              Dort haben Sie die Möglichkeit, Support zu erhalten und auf die gesammelten Daten zuzugreifen. 
+              Bitte beachten Sie, dass das Icon in der Taskleiste versteckt sein kann.
               overflow.
             </p>
             <p>
-              The following trackers are currently running:
+              Die folgenden Monitors laufen derzeit:
               {{ studyInfo.currentlyActiveTrackers.join(', ') }}
             </p>
 
             <p>
-              Contact {{ studyInfo.contactName }} (<a :href="'mailto:' + studyInfo.contactEmail" target="_blank">{{ studyInfo.contactEmail }}</a>) in case of questions.
+              Kontaktieren Sie {{ studyInfo.contactName }} (<a :href="'mailto:' + studyInfo.contactEmail" target="_blank">{{ studyInfo.contactEmail }}</a>) im Falle von Fragen.
             </p>
           </article>
         </div>
@@ -304,8 +301,8 @@ function startAllTrackers() {
           :disabled="isLoading"
           @click="handleNextStep"
         >
-          <template v-if="currentStep === maxSteps - 1">Close </template>
-          <template v-else> Next </template>
+          <template v-if="currentStep === maxSteps - 1">Schliessen </template>
+          <template v-else> Weiter </template>
         </button>
       </div>
     </div>
