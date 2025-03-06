@@ -215,42 +215,41 @@ function revealItemInFolder(event: Event) {
         <transition-group :name="transitionName">
           <div v-if="currentNamedStep === 'export-1'" key="0" class="flex w-full flex-col">
             <h1 class="mb-8 text-4xl font-medium text-neutral-800 dark:text-neutral-300">
-              Data Export
+              Daten-Export
             </h1>
             <article class="prose prose-lg max-w-none">
               <p>
-                Thank you for participating in the {{ studyConfig.name }}-study! So far, all data
-                that has been collected and stored
-                <b class="dark:text-white">only locally on your machine</b>. In this step, the
-                researchers would like to ask you to share this data for analysis and publication in
-                scientific journals.
+                Vielen Dank für Ihre Teilnahme an der {{ studyConfig.name }}-Studie! Bisher wurden alle gesammelten Daten
+                <b class="dark:text-white">nur lokal auf Ihrem Gerät gespeichert</b>. In diesem Schritt
+                möchten die Forschenden Sie bitten, diese Daten für die Analyse und eine mögliche 
+                Veröffentlichung in wissenschaftlichen Fachzeitschriften zu teilen.
               </p>
               <p>
-                Please click <b class="dark:text-white">"Next"</b> once you are ready to
-                <b class="dark:text-white">first review and later share your data</b>.
+                Bitte klicken Sie auf <b class="dark:text-white">"Weiter"</b> sobald Sie bereit sind,
+                <b class="dark:text-white">Ihre Daten zunächst zu überprüfen und später zu teilen</b>.
                 <span v-if="studyConfig.dataExportEncrypted">
-                  The export that will be created with your permission in the next step will be
-                  encrypted and password-protected. </span
+                  Der Export, der mit Ihrer Erlaubnis im nächsten Schritt erstellt wird, 
+                  wird verschlüsselt und passwortgeschützt sein.</span
                 >
               </p>
               <p class="mb-4">
-                Below, you find additional information on the study and how the researchers ensure
-                your data privacy and security.
+                Unten finden Sie weitere Informationen zur Studie und dazu, wie die Forschenden
+                Ihre Datenprivatsphäre und -sicherheit gewährleisten.
               </p>
               <table class="table-auto text-sm">
                 <tbody>
                   <tr>
-                    <td>Contact:</td>
+                    <td>Kontakt:</td>
                     <td>{{ studyInfo.contactName }} (<a :href="'mailto:' + studyInfo.contactEmail" target="_blank">{{ studyInfo.contactEmail }}</a>)</td>
                   </tr>
                   <tr>
-                    <td>Study Website:</td>
+                    <td>Website zur Studie:</td>
                     <td>
                       <a :href="studyInfo.infoUrl" target="_blank">{{ studyInfo.infoUrl }}</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>Privacy Policy:</td>
+                    <td>Datenschutzerklärung:</td>
                     <td>
                       <a :href="studyInfo.privacyPolicyUrl" target="_blank">{{
                         studyInfo.privacyPolicyUrl
@@ -258,7 +257,7 @@ function revealItemInFolder(event: Event) {
                     </td>
                   </tr>
                   <tr>
-                    <td class="w-40 align-top">Study Description:</td>
+                    <td class="w-40 align-top">Beschreibung zur Studie:</td>
                     <td>
                       <!-- <div class="collapse bg-base-200">
                         <input v-model="studyDescriptionExpanded" type="checkbox" />
@@ -277,47 +276,44 @@ function revealItemInFolder(event: Event) {
           </div>
           <div v-if="currentNamedStep === 'create-export'" key="2" class="flex w-full flex-col">
             <h1 class="mb-8 text-4xl font-medium text-neutral-800 dark:text-neutral-300">
-              Your Export is Ready
+              Ihr Export ist bereit für den Upload
             </h1>
             <article class="prose prose-lg max-w-none">
               <p>
-                Thank you for reviewing and exporting your data for the study
-                {{ studyConfig.name }}.
+                Vielen Dank, dass Sie Ihre Daten für die Studie {{ studyConfig.name }} überprüft und exportiert haben.
               </p>
               <p>
-                Your data was exported and we created a
+                Ihre Daten wurden exportiert und wir haben ein
                 <span v-if="studyConfig.dataExportEncrypted"
-                  >password-protected and encrypted
+                  >passwort-geschütztes und verschlüsseltes
                 </span>
-                file based on your preferences on the previous page. To share this file with the
-                researchers, please take the following steps:
+                File basierend auf Ihren Präferenzen auf der vorherigen Seite erstellt. Um dieses File mit den Forschenden zu teilen,
+                befolgen Sie bitte folgende Schritte:
               </p>
               <ol>
                 <li>
-                  <a href="#" @click="revealItemInFolder">Click here</a> to open the folder
-                  containing your data-file (<span
+                  <a href="#" @click="revealItemInFolder">Klicken Sie hier</a> um den Ordner zu öffnen,
+                  welcher ihre exportierten Daten enthält (<span
                     class="badge badge-neutral font-bold text-white"
                     >{{ fileName }}</span
                   >).
                 </li>
                 <li>
-                  <a href="#" @click="openUploadUrl">Click here</a> to open the upload
-                  page.
+                  <a href="#" @click="openUploadUrl">Klicken Sie hier</a> um die Upload-Seite zu öffnen
                 </li>
                 <li>
-                  Upload the file named
-                  <span class="badge badge-neutral font-bold text-white">{{ fileName }}</span> using
-                  the upload page.
+                  Laden Sie das File mit dem Namen
+                  <span class="badge badge-neutral font-bold text-white">{{ fileName }}</span> auf die Upload-Seite hoch.
                 </li>
               </ol>
               <p>
-                Please contact {{ studyConfig.contactName }} ({{ studyConfig.contactEmail }}) in
-                case you have any questions. Thank you!
+                Bitte kontaktieren Sie {{ studyConfig.contactName }} ({{ studyConfig.contactEmail }}) 
+                im Falle von Fragen oder Problemen. Besten Dank!
               </p>
               <p v-if="studyConfig.dataExportEncrypted">
-                If you want to review the complete data file before sharing it with the researchers,
-                please refer to this guide. The <b class="dark:text-white">password</b> required for
-                opening the exported file is:
+                Wenn Sie die vollständige Datendatei vor dem Teilen mit den Forschenden überprüfen möchten,
+                lesen Sie bitte diese Anleitung. Das <b class="dark:text-white">Passwort</b> für das Öffnen des
+                exportierten Files lautet:
                 <span class="password-badge">PersonalAnalytics_{{ studyInfo.subjectId }}</span
                 >.
               </p>
@@ -371,8 +367,8 @@ function revealItemInFolder(event: Event) {
           :disabled="isLoading"
           @click="handleNextStep"
         >
-          <template v-if="currentStep === maxSteps - 1">Close </template>
-          <template v-else> Next </template>
+          <template v-if="currentStep === maxSteps - 1">Schliessen </template>
+          <template v-else> Weiter </template>
         </button>
       </div>
     </div>
