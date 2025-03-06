@@ -295,12 +295,12 @@ export class WindowService {
       if (!seemsToHaveCompletedExport) {
         const result = await dialog.showMessageBox({
           type: 'warning',
-          buttons: ['Continue with data export', 'Close Anyway'],
+          buttons: ['Daten Export fortsetzen', 'Trotzdem schliessen'],
           defaultId: 0,
           cancelId: 0,
-          title: 'Complete Data Export',
-          message: 'It seems that you have not completed the data export process.',
-          detail: 'Please make sure you completed all the steps in this window, including manually uploading the exported data file. Do you want to close the window anyway?'
+          title: 'Schliessen Sie den Daten Export ab',
+          message: 'Es scheint, als ob Sie die Daten noch nicht mit den Forschenden geteilt haben.',
+          detail: 'Bitte stellen Sie sicher, dass Sie alle im Fenster beschriebenen Schritte abgeschlossen haben. Dazu gehört auch das manuelle hochladen des Daten Exports auf die Upload-Seite. Möchten Sie das Fenster trotzdem schliessen?'
         })
 
         if (result.response === 0) {
@@ -360,40 +360,40 @@ export class WindowService {
     const trayMenuItems: MenuItemConstructorOptions[] = [
       { label: `Version ${app.getVersion()}`, enabled: false },
       {
-        label: 'Check for updates',
+        label: 'Nach Updates suchen',
         enabled: false,
         click: () => this.appUpdaterService.checkForUpdates({ silent: false })
       },
       { type: 'separator' },
       {
-        label: `Subject ID: ${settings.subjectId}`,
+        label: `Teilnehmenden-ID: ${settings.subjectId}`,
         enabled: false,
       },
       {
-        label: 'Copy Subject Id',
+        label: 'Kopiere Teilnehmenden-ID',
         click: () => clipboard.writeText(settings.subjectId)
       },
       {
-        label: `Days participated: ${settings.daysParticipated}`,
+        label: `Anzahl Tage teilgenommen: ${settings.daysParticipated}`,
         enabled: false,
         visible: studyConfig.displayDaysParticipated
       },
       { type: 'separator' },
       {
-        label: 'Open Experience Sampling',
+        label: 'Öffne Experience Sampling',
         click: () => this.createExperienceSamplingWindow(true)
       },
       {
-        label: 'Open Settings',
+        label: 'Öffne Einstellungen',
         click: () => this.createSettingsWindow()
       },
       {
-        label: 'Open Onboarding',
+        label: 'Öffne Onboarding',
         click: () => this.createOnboardingWindow(),
         visible: is.dev
       },
       {
-        label: 'Open Study Data Export',
+        label: 'Öffne Daten Export der Studie',
         click: (): void => {
           LOG.info(`Opening data export`)
           this.createDataExportWindow()
@@ -402,14 +402,14 @@ export class WindowService {
       },
       { type: 'separator' },
       {
-        label: 'Get Help',
+        label: 'Support erhalten',
         click: (): void => {
           const mailToAddress = studyConfig.contactEmail
           shell.openExternal(`mailto:${mailToAddress}`)
         }
       },
       {
-        label: 'Report a Problem',
+        label: 'Ein Problem melden',
         click: (): void => {
           const mailToAddress = studyConfig.contactEmail
           shell.openExternal(`mailto:${mailToAddress}`)
@@ -417,7 +417,7 @@ export class WindowService {
       },
       { type: 'separator' },
       {
-        label: 'Quit',
+        label: 'App beenden',
         click: () => {
           app.quit()
         }
