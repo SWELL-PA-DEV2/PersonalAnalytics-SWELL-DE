@@ -11,8 +11,8 @@ const considerWorkHours = studyConfig.trackers.experienceSamplingTracker.enabled
   <div class="settings-container">
     <nav class="sidenav">
       <ul>
-        <li><router-link to="about">About</router-link></li>
-        <li v-if="considerWorkHours"><router-link to="work-hours">Active Times</router-link></li>
+        <li><router-link to="about">Über</router-link></li>
+        <li v-if="considerWorkHours"><router-link to="work-hours">Aktivzeiten</router-link></li>
         <!-- <li><router-link to="config">App Configuration</router-link></li> -->
       </ul>
     </nav>
