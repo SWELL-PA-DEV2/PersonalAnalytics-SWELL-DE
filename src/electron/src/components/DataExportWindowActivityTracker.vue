@@ -40,7 +40,7 @@ const emitObfuscateSampleData = async () => {
 <template>
   <div class="my-5 border border-slate-400 p-2">
     <div class="prose">
-      <h2>How do you want to share your Window Activity data?</h2>
+      <h2>Wie möchten Sie Ihre Fensteraktivitätsdaten teilen?</h2>
     </div>
     <div class="mt-4 flex w-1/2 flex-col">
       <div class="form-control">
@@ -52,7 +52,7 @@ const emitObfuscateSampleData = async () => {
             class="radio checked:bg-blue-500"
             @change="emitOptionChanged"
           />
-          <span class="label-text ml-2">Share data as-is</span>
+          <span class="label-text ml-2">Daten unverändert teilen</span>
         </label>
       </div>
       <div class="form-control">
@@ -64,7 +64,7 @@ const emitObfuscateSampleData = async () => {
             class="radio checked:bg-blue-500"
             @change="emitOptionChanged"
           />
-          <span class="label-text ml-2">Obfuscate potentially sensitive data</span>
+          <span class="label-text ml-2">Potentiell sensible Daten verschleiern</span>
         </label>
       </div>
       <div class="form-control">
@@ -77,7 +77,7 @@ const emitObfuscateSampleData = async () => {
             @change="emitOptionChanged"
           />
           <span class="label-text ml-2"
-            >Only obfuscate data with the following (comma-separated) list of terms</span
+            >Nur Daten mit den folgenden Begriffen verschleiern (kommagetrennte Liste):</span
           >
         </label>
       </div>
@@ -87,7 +87,7 @@ const emitObfuscateSampleData = async () => {
             <input
               v-model.trim="obfuscationTermsInput"
               type="text"
-              placeholder="Enter, terms, here, ..."
+              placeholder="Begriff1, Begriff2, Begriff3, ..."
               class="input input-bordered w-full text-sm"
               @input="emitObfuscationTermsChanged"
               @keyup.enter="emitObfuscateSampleData"
@@ -105,7 +105,7 @@ const emitObfuscateSampleData = async () => {
             class="radio checked:bg-blue-500"
             @change="emitOptionChanged"
           />
-          <span class="label-text ml-2">Do not share this data</span>
+          <span class="label-text ml-2">Diese Daten nicht teilen</span>
         </label>
       </div>
     </div>
@@ -119,19 +119,19 @@ const emitObfuscateSampleData = async () => {
         v-if="selectedOption === DataExportType.None"
         class="absolute inset-0 z-10 flex items-center justify-center bg-slate-800 bg-opacity-40"
       >
-        <p class="bg-slate-800 p-5 text-lg text-white">This data is not being shared</p>
+        <p class="bg-slate-800 p-5 text-lg text-white">Diese Daten werden nicht geteilt</p>
       </div>
       <div class="max-h-48 w-full overflow-y-auto">
         <table class="table table-zebra table-pin-rows max-h-48 w-full text-xs">
           <thead class="border-b">
             <tr>
-              <th>Window Title</th>
+              <th>Fenstertitel</th>
               <th>URL</th>
-              <th>Activity</th>
-              <th>Process Name</th>
-              <th>Process Path</th>
-              <th>Process ID</th>
-              <th>Timestamp</th>
+              <th>Aktivität</th>
+              <th>Prozess-Name</th>
+              <th>Prozess-Path</th>
+              <th>Prozess-ID</th>
+              <th>Zeit</th>
             </tr>
           </thead>
           <tbody>
