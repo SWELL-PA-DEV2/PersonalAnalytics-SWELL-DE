@@ -32,7 +32,7 @@ const emitChange = () => {
 <template>
   <div class="my-5 border border-slate-400 p-2">
     <div class="prose">
-      <h2>How do you want to share your User Input data?</h2>
+      <h2>Wie möchten Sie Ihre Benutzereingabedaten teilen?</h2>
     </div>
     <div class="mt-4 flex w-1/3 flex-col">
       <div class="form-control">
@@ -44,7 +44,7 @@ const emitChange = () => {
             class="radio checked:bg-blue-500"
             @change="emitChange"
           />
-          <span class="label-text ml-2">Share data as-is</span>
+          <span class="label-text ml-2">Daten unverändert teilen</span>
         </label>
       </div>
       <div class="form-control">
@@ -56,12 +56,12 @@ const emitChange = () => {
             class="radio checked:bg-blue-500"
             @change="emitChange"
           />
-          <span class="label-text ml-2">Do not share this data</span>
+          <span class="label-text ml-2">Daten nicht teilen</span>
         </label>
       </div>
     </div>
     <div class="prose mt-5">
-      <p>Here is a sample of your anonymized User Input data:</p>
+      <p>Hier ist eine Beispielansicht Ihrer anonymisierten Benutzereingabedaten:</p>
     </div>
     <div
       class="relative mt-5"
@@ -73,18 +73,18 @@ const emitChange = () => {
         v-if="selectedOption === DataExportType.None"
         class="absolute inset-0 z-10 flex items-center justify-center bg-slate-800 bg-opacity-40"
       >
-        <p class="bg-slate-800 p-5 text-lg text-white">This data is not being shared</p>
+        <p class="bg-slate-800 p-5 text-lg text-white">Diese Daten werden nicht geteilt</p>
       </div>
       <div class="max-h-48 w-full overflow-y-auto">
         <table class="table table-zebra table-pin-rows max-h-48 w-full text-xs">
           <thead class="border-b">
             <tr>
-              <th>Keys Total</th>
-              <th>Click Total</th>
-              <th>Moved Distance</th>
-              <th>Scroll Delta</th>
-              <th>Start Timestamp</th>
-              <th>End Timestamp</th>
+              <th>Zahl der Tastenanschläge</th>
+              <th>Zahl der Klicks</th>
+              <th>Maus-Bewegung</th>
+              <th>Maus-Scrolling</th>
+              <th>Startzeit</th>
+              <th>Endzeit</th>
             </tr>
           </thead>
           <tbody>
