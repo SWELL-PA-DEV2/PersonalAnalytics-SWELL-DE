@@ -2,7 +2,7 @@ import { StudyConfiguration } from './StudyConfiguration';
 
 const studyConfig: StudyConfiguration = {
   name: 'SWeLL - Studenteenwohlbefinden und -Lernen auf Laptops',
-  shortDescription: 'Das Ziel der Studie ist es, zu verstehen, wie Studierende aus verschiedenen Fachrichtungen Laptops und Tablets für ihr Studium nutzen, welchen Einfluss dies auf ihr Wohlbefinden hat und wie digitale Lernprozesse optimiert werden können. Eine detaillierte Beschreibung der Studie finden Sie<a href="https://mydata-lab.uzh.ch/de/studien/swell.html" target=_blank">hier</a>.',
+  shortDescription: 'Das Ziel der Studie ist es, zu verstehen, wie Studierende aus verschiedenen Fachrichtungen Laptops und Tablets für ihr Studium nutzen, welchen Einfluss dies auf ihr Wohlbefinden hat und wie digitale Lernprozesse optimiert werden können. Eine detaillierte Beschreibung der Studie finden Sie <a href="https://mydata-lab.uzh.ch/de/studien/swell.html" target=_blank">hier</a>.',
   infoUrl: 'https://mydata-lab.uzh.ch/de/studien/swell.html',
   privacyPolicyUrl: 'https://mydata-lab.uzh.ch/de/studien/swell.html',
   uploadUrl: 'https://hasel.dev/swell-upload',

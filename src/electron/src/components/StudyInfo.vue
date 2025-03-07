@@ -11,30 +11,30 @@ defineProps({
 </script>
 <template>
   <article class="prose prose-lg mt-4">
-    <h2>Study Info</h2>
+    <h2>Infos zur Studie</h2>
     <div class="-mr-6 max-h-64 overflow-y-auto pr-4">
       <div class="my-0 text-base" v-html="studyInfo.shortDescription" />
     </div>
     <table class="table-auto">
       <tbody>
         <tr>
-          <td class="w-40">Your Subject Id:</td>
+          <td class="w-40">Ihre Teilnehmenden-ID:</td>
           <td>
             <span class="subject-badge">{{ studyInfo.subjectId }}</span>
           </td>
         </tr>
         <tr>
-          <td>Contact:</td>
+          <td>Kontakt:</td>
           <td>{{ studyInfo.contactName }} (<a :href="'mailto:' + studyInfo.contactEmail" target="_blank">{{ studyInfo.contactEmail }}</a>)</td>
         </tr>
         <tr>
-          <td>Study Website:</td>
+          <td>Website zur Studie:</td>
           <td>
             <a :href="studyInfo.infoUrl" target="_blank">{{ studyInfo.infoUrl }}</a>
           </td>
         </tr>
         <tr>
-          <td>Privacy Policy:</td>
+          <td>Datenschutzerklärung:</td>
           <td>
             <a :href="studyInfo.privacyPolicyUrl" target="_blank">{{
               studyInfo.privacyPolicyUrl

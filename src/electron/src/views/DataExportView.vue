@@ -219,7 +219,7 @@ function revealItemInFolder(event: Event) {
             </h1>
             <article class="prose prose-lg max-w-none">
               <p>
-                Vielen Dank für Ihre Teilnahme an der {{ studyConfig.name }}-Studie! Bisher wurden alle gesammelten Daten
+                Vielen Dank für Ihre Teilnahme an der '{{ studyConfig.name }}'-Studie! Bisher wurden alle gesammelten Daten
                 <b class="dark:text-white">nur lokal auf Ihrem Gerät gespeichert</b>. In diesem Schritt
                 möchten die Forschenden Sie bitten, diese Daten für die Analyse und eine mögliche 
                 Veröffentlichung in wissenschaftlichen Fachzeitschriften zu teilen.
@@ -280,7 +280,7 @@ function revealItemInFolder(event: Event) {
             </h1>
             <article class="prose prose-lg max-w-none">
               <p>
-                Vielen Dank, dass Sie Ihre Daten für die Studie {{ studyConfig.name }} überprüft und exportiert haben.
+                Vielen Dank, dass Sie Ihre Daten für die '{{ studyConfig.name }}'-Studie überprüft und exportiert haben.
               </p>
               <p>
                 Ihre Daten wurden exportiert und wir haben ein
@@ -358,7 +358,7 @@ function revealItemInFolder(event: Event) {
           :disabled="currentStep === 0"
           @click="handleBackStep"
         >
-          Back
+          Zurück
         </button>
         <StepIndicator v-if="maxSteps > 1" :current-step="currentStep" :total-steps="maxSteps" />
         <button
