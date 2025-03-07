@@ -33,33 +33,33 @@ onMounted(async () => {
 
       <div class="z-10 mt-10 mb-10 flex items-center">
         <button class="btn btn-outline btn-sm mr-5" type="button" @click="openLogs">
-          Open Logs
+          Logdaten öffnen
         </button>
         <button class="btn btn-outline btn-sm" type="button" @click="openCollectedData">
-          Open Collected Data
+          Gespeicherte Daten öffnen
         </button>
       </div>
 
       <StudyInfo :study-info="studyInfo" />
 
       <article class="prose prose-lg mt-4"> 
-        <h2 class="mt-0">PersonalAnalytics Tool Info</h2>
+        <h2 class="mt-0">Info über das PersonalAnalytics-Tool</h2>
         <p class="text-base">
-          PersonalAnalytics is a software, developed by the Human Aspects of Software Engineering
-          Lab of the University of Zurich to non-intrusively collect computer interaction data,
-          store them locally to the user's machine, and allow users to voluntarily share a
-          user-defined and potentially anonymized subset of the data with researchers for scientific
-          purposes.
+          PersonalAnalytics ist eine Software, die vom Human Aspects of Software Engineering Lab der 
+          Universität Zürich entwickelt wurde, um Computer-Interaktionsdaten nicht-intrusiv zu erfassen,
+          sie lokal auf dem Rechner des Nutzers zu speichern und es den Nutzern zu ermöglichen, 
+          freiwillig eine vom Nutzer definierte und potenziell anonymisierte Teilmenge der Daten mit 
+          Forschern für wissenschaftliche Zwecke zu teilen.
         </p>
         <table class="table-auto">
           <tbody>
             <tr>
-              <td class="w-40">Active Trackers:</td>
+              <td class="w-40">Aktive Datenmonitoren:</td>
               <td>{{ studyInfo.currentlyActiveTrackers.join(', ') }}</td>
             </tr>
             <tr>
-              <td>Contact:</td>
-              <td>Andre Meyer (ameyer@ifi.uzh.ch)</td>
+              <td>Kontakt:</td>
+              <td>André Meyer (ameyer@ifi.uzh.ch)</td>
             </tr>
             <tr>
               <td>Website:</td>
@@ -70,7 +70,7 @@ onMounted(async () => {
               </td>
             </tr>
             <tr>
-              <td>Privacy Policy:</td>
+              <td>Datenschutzbestimmungen:</td>
               <td>
                 <a
                   href="https://github.com/HASEL-UZH/PersonalAnalytics/blob/dev-am/documentation/PRIVACY.md"
@@ -82,12 +82,13 @@ onMounted(async () => {
           </tbody>
         </table>
         <p class="text-base">
-          Various versions of PersonalAnalytics were thoroughly tested through more than a dozens field 
-          studies involving hundreds of users. Even though the software runs reliably on most systems, we cannot exclude occasional 
-          software issues. The use of this software is at the sole risk of the user. The creators of the software disclaim any 
-          liability for damages or consequences, including but not limited to damages or losses arising from the use, 
-          modification, or misuse of the software. The software is provided under an open-source license to researchers 
-          and users <i>as-is</i> and can be inspected under the link provided above.
+          Verschiedene Versionen von PersonalAnalytics wurden in mehr als einem Dutzend Feldstudien mit Hunderten 
+          von Nutzer:innen umfassend getestet. Obwohl die Software auf den meisten Systemen zuverlässig läuft, 
+          können gelegentliche Softwareprobleme nicht ausgeschlossen werden. Die Nutzung dieser Software erfolgt 
+          auf eigenes Risiko. Die Entwickler:innen der Software übernehmen keine Haftung für Schäden oder Konsequenzen, 
+          einschließlich, aber nicht beschränkt auf Schäden oder Verluste, die durch die Nutzung, Modifikation oder 
+          den Missbrauch der Software entstehen. Die Software wird unter einer Open-Source-Lizenz wie gesehen ("as-is") 
+          Forscher:innen und Nutzer:innen bereitgestellt und kann über den oben angegebenen Link eingesehen werden.
         </p>
         <div class="float-end flex pb-7">
           <a href="https://www.uzh.ch" target="_blank" class="mr-5">
