@@ -12,7 +12,7 @@ const questionLabels = esConfig.responseOptions[randomQuestionNr];
 const scale = Array.from({ length: esConfig.scale }, (_, i) => i + 1);
 
 const promptedAt = new Date(Date.now());
-const promptedAtString = promptedAt.toLocaleTimeString().substring(0, 5);
+const promptedAtString = promptedAt.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false});
 
 const sampleLoadingValue = ref<number | null>();
 
@@ -66,7 +66,7 @@ async function skipExperienceSample() {
     <div class="pointer-events-auto flex h-full flex-row">
       <div class="flex-1 p-4 pt-1">
         <div class="flex-1">
-          <p class="prompt">{{ question }}</p>
+          <p class="prompt">{{ question }}</p><br />
           <div class="-mx-1 mt-2 flex flex-row justify-between">
             <div
               v-for="value in scale"
@@ -96,7 +96,7 @@ async function skipExperienceSample() {
           class="flex w-full items-center justify-center rounded-none border border-transparent px-4 text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:outline-none"
           @click="skipExperienceSample()"
         >
-          <span v-if="sampleLoadingValue !== null" class="w-6"> Weiter </span>
+          <span v-if="sampleLoadingValue !== null" class="w-18"> Weiter </span>
           <span v-else class="w-6 font-medium">
             <span class="loading loading-spinner loading-xs" />
           </span>
