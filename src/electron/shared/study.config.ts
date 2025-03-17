@@ -26,23 +26,15 @@ const studyConfig: StudyConfiguration = {
     experienceSamplingTracker: {
       enabled: true,
       enabledWorkHours: false,
-      scale: 5,
+      scale: 7,
       questions: [
         'Wie produktiv sind Sie gerade im Vergleich zu sonst?',
         'Wie gut nutzen Sie gerade Ihre Zeit?',
-        'Ich fühle mich in Bezug auf die Zukunft gerade optimistisch.', 
-        'Ich fühle mich gerade nützlich.', 
-        'Ich fühle mich gerade entspannt.', 
-        'Ich gehe mit Problemen gerade gut um.', 
-        'Ich kann gerade klar denken.', 
-        'Ich fühle mich anderen Menschen gerade nahe.', 
-        'Ich bin gerade in der Lage, Entscheidungen zu treffen.'
+        'Ich fühle mich gerade gestresst',
+        'Ich fühle mich gerade überfordert',
+        'Ich fühle mich gerade gut'
       ],
       responseOptions: [
-        ['gar nicht', 'etwas', 'sehr'],
-        ['gar nicht', 'etwas', 'sehr'],
-        ['gar nicht', 'etwas', 'sehr'],
-        ['gar nicht', 'etwas', 'sehr'],
         ['gar nicht', 'etwas', 'sehr'],
         ['gar nicht', 'etwas', 'sehr'],
         ['gar nicht', 'etwas', 'sehr'],
