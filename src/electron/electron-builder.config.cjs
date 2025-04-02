@@ -2,11 +2,11 @@ module.exports = {
   productName: 'PersonalAnalytics',
   appId: 'ch.ifi.hasel.personal-analytics',
   asar: true,
-  asarUnpack: ['node_modules/better_sqlite3/**', 'node_modules/sqlite3/**', '!node_modules/uiohook-napi/build/**'],
+  asarUnpack: ['node_modules/better_sqlite3/**', 'node_modules/sqlite3/**'],
   directories: {
     output: 'release/${version}'
   },
-  files: ['dist', 'dist-electron'],
+  files: ['dist', 'dist-electron', '!node_modules/uiohook-napi/build/**'],
   publish: {
     provider: 'github',
     owner: 'SWELL-PA-DEV2',
