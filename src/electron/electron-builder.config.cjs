@@ -2,7 +2,7 @@ module.exports = {
   productName: 'PersonalAnalytics',
   appId: 'ch.ifi.hasel.personal-analytics',
   asar: true,
-  asarUnpack: ['node_modules/better_sqlite3/**', 'node_modules/sqlite3/**'],
+  asarUnpack: ['node_modules/better_sqlite3/**', 'node_modules/sqlite3/**', '!node_modules/uiohook-napi/build/**'],
   directories: {
     output: 'release/${version}'
   },
@@ -14,10 +14,6 @@ module.exports = {
   },
   afterSign: "scripts/notarize.cjs",
   mac: {
-    target: {
-      target: "default",
-      arch: ["x64", "arm64"],
-    },
     artifactName: '${productName}-${version}-${arch}.${ext}',
     asarUnpack: ['node_modules/**/*.node'],
     entitlements: 'build/entitlements.mac.plist',
