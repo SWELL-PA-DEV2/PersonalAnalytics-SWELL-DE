@@ -70,7 +70,7 @@ export class DataExportService {
 
       if (
         windowActivityExportType === DataExportType.Obfuscate ||
-        DataExportType.ObfuscateWithTerms
+        windowActivityExportType === DataExportType.ObfuscateWithTerms
       ) {
         const items: {
           windowTitle: string;
